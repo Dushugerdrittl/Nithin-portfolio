@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ThemeToggle from './components/ThemeToggle';
 import ProjectCard from './components/ProjectCard';
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
+import PersonalDetails from './components/PersonalDetails';
 import CertificatePage from './components/CertificatePage';
 
 import { projects as projectData } from './data/portfolioData';
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-neutral1 text-primary dark:bg-primary dark:text-neutral1 transition-colors duration-300 p-6 m-4 rounded-lg relative before:absolute before:inset-0 before:rounded-lg before:border-4 before:border-gradient-to-r before:from-pink-400 before:via-purple-500 before:to-pink-400 before:pointer-events-none before:z-[-1] box-border">
@@ -25,7 +32,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <section id="about" className="my-12 text-center scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg">
+                  <section id="about" className="my-12 text-center scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg" data-aos="fade-up">
                     <h2 className="text-h1 font-heading text-primary dark:text-secondary mb-4">Nithin Sai Koushik Kancharla</h2>
                     <p className="text-h5 font-body text-neutral2 dark:text-gray-300 max-w-3xl mx-auto leading-body whitespace-pre-line">
                       Hi, I'm Nithin 👋 — Android App Developer & Flutter Enthusiast
@@ -33,8 +40,8 @@ function App() {
                     </p>
                   </section>
 
-                  {/* Projects Section */}
-                  <section id="projects" className="my-16 scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg">
+                  {/* Projects Section */} 
+                  <section id="projects" className="my-16 scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg" data-aos="fade-up">
                     <h2 className="text-h2 font-heading text-primary dark:text-secondary mb-8 text-center">Internships and Project Works</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {projectData.map((project) => {
@@ -52,10 +59,11 @@ function App() {
                     </div>
                   </section>
 
-                  {/* Skills Section */}
-                  <Skills />
-
-                  {/* Add more sections like Resume, Contact here */}
+                  {/* Skills Section */} 
+                  <Skills data-aos="fade-up" />
+                  <PersonalDetails data-aos="fade-up" />
+                  
+                  {/* Add more sections like Resume, Contact here */} 
                 </>
               }
             />

@@ -52,7 +52,7 @@ export const projects = [
     title: 'own project-Budget_calculator_android_app',
     description: 'A delightfully themed budgeting app wrapped in a soft pink palette and subtle Hello Kitty charm. Built with a clean, intuitive layout, this Android app lets users track expenses, categorize budgets, and visualize their savings goals',
     tags: ['Android', 'Java', 'XML', 'WebSocket'],
-    imageUrl: '/images/I_3.jpg', // Updated to new image path as per user
+    imageUrl: '/images/budget_cal.jpg', // Updated to new image path as per user
     sourceUrl: 'https://github.com/Dushugerdrittl/Budget_calculator', // Updated to user provided source code URL
     sourceLabel: 'Source Code',
   },
