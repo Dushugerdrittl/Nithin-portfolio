@@ -18,12 +18,12 @@ const PersonalDetails = () => {
       <h2 className="text-h2 font-heading text-neutral2 dark:text-neutral1 mb-12 text-center">Personal Details</h2>
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Removed About Me section as per user request */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-h3 font-extrabold text-neutral2 dark:text-neutral1 mb-6 border-b border-neutral2 dark:border-neutral1 pb-2">Education</h3>
-            <ul className="space-y-4 text-body font-body text-neutral2 dark:text-neutral1">
+            <ul className="space-y-5 text-body font-body text-neutral2 dark:text-neutral1">
               {personalDetails.education.map((edu, index) => (
-                <li key={index} className="mb-2">
+                <li key={index} className="mb-3">
                   <strong className="text-primary dark:text-secondary">{edu.institution}</strong> - <span className="italic">{edu.degree}</span> ({edu.year})
                   <br />
                   <span className="text-sm text-neutral2 dark:text-gray-400">{edu.details}</span>
@@ -31,7 +31,7 @@ const PersonalDetails = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-h3 font-heading text-neutral2 dark:text-neutral1 mb-6 border-b border-neutral2 dark:border-neutral1 pb-2 font-bold">Hobbies</h3>
           <div>
             <ul className="list-disc list-inside text-body font-body text-neutral2 dark:text-neutral1">
@@ -42,7 +42,7 @@ const PersonalDetails = () => {
           </div>
           </div>
         </div>
-          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-md mx-auto">
+          <div className="bg-neutral1 dark:bg-primary-dark rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-md mx-auto">
             <h3 className="text-h3 font-heading text-neutral2 dark:text-neutral1 mb-6 border-b border-neutral2 dark:border-neutral1 pb-2 text-center font-bold">Social Media</h3>
             <div className="flex gap-8 justify-center">
               {personalDetails.socialMedia.map((social) => (

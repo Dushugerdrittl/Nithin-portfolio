@@ -8,21 +8,21 @@ const Skills = () => {
         Skills & Tech Stack
       </h2>
       <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="bg-neutral1 dark:bg-primary-dark p-4 rounded-lg shadow-card border-2 border-gradient-to-r border-pink-400/50
-                         flex flex-col items-center justify-center gap-2
+              className="bg-neutral1 dark:bg-primary-dark p-6 rounded-lg shadow-lg border-2 border-gradient-to-r border-pink-400/50
+                         flex flex-col items-center justify-center gap-3
                          transform hover:scale-110 transition-transform duration-300 ease-in-out"
               tabIndex={0}
               role="img"
               aria-label={skill.name}
             >
-              <div className={skill.color}>
+              <div className={`${skill.color} text-4xl`}>
                 {skill.icon}
               </div>
-              <p className="text-sm font-extrabold text-neutral2 dark:text-neutral1">
+              <p className="text-base font-extrabold text-neutral2 dark:text-neutral1">
                 {skill.name}
               </p>
             </div>

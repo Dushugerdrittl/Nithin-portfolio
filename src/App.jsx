@@ -19,9 +19,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-background text-primary dark:bg-background dark:text-primary transition-colors duration-300 p-6 m-4 rounded-lg relative box-border">
-        <header className="flex justify-between items-center sticky top-0 bg-background/80 dark:bg-background/80 backdrop-blur-sm z-10 border-b border-border/80 dark:border-border/80 p-4">
-          <h1 className="text-h4 font-heading text-primary dark:text-primary">Welcome to Master Nithin Sai Kosuhik Portfolio</h1>
-          <div className="flex items-center gap-4">
+        <header className="flex justify-between items-center sticky top-0 bg-background/90 dark:bg-background/90 backdrop-blur-md z-60 border-b border-border/80 dark:border-border/80 p-6 shadow-md">
+          <h1 className="text-h3 font-heading text-primary dark:text-primary">Welcome to Master Nithin Sai Kosuhik Portfolio</h1>
+          <div className="flex items-center gap-6">
             <NavBar />
             <ThemeToggle />
           </div>
