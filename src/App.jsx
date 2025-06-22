@@ -18,9 +18,9 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-neutral1 text-primary dark:bg-primary dark:text-neutral1 transition-colors duration-300 p-6 m-4 rounded-lg relative before:absolute before:inset-0 before:rounded-lg before:border-4 before:border-gradient-to-r before:from-pink-400 before:via-purple-500 before:to-pink-400 before:pointer-events-none before:z-[-1] box-border">
-        <header className="flex justify-between items-center sticky top-0 bg-neutral1/80 dark:bg-primary/80 backdrop-blur-sm z-10 border-b border-neutral-200/80 dark:border-primary-dark/80 p-4">
-          <h1 className="text-h4 font-heading text-primary dark:text-secondary">Welcome to Master Nithin Sai Kosuhik Portfolio</h1>
+      <div className="min-h-screen bg-background text-primary dark:bg-background dark:text-primary transition-colors duration-300 p-6 m-4 rounded-lg relative box-border">
+        <header className="flex justify-between items-center sticky top-0 bg-background/80 dark:bg-background/80 backdrop-blur-sm z-10 border-b border-border/80 dark:border-border/80 p-4">
+          <h1 className="text-h4 font-heading text-primary dark:text-primary">Welcome to Master Nithin Sai Kosuhik Portfolio</h1>
           <div className="flex items-center gap-4">
             <NavBar />
             <ThemeToggle />
@@ -32,12 +32,18 @@ function App() {
               path="/"
               element={
                 <>
-                  <section id="about" className="my-12 text-center scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg" data-aos="fade-up">
+                  <section id="about" className="my-12 scroll-mt-20 bg-accent/20 rounded-lg p-8 shadow-lg" data-aos="fade-up">
                     <h2 className="text-h1 font-heading text-primary dark:text-secondary mb-4">Nithin Sai Koushik Kancharla</h2>
-                    <p className="text-h5 font-body text-neutral2 dark:text-gray-300 max-w-3xl mx-auto leading-body whitespace-pre-line">
-                      Hi, I'm Nithin 👋 — Android App Developer & Flutter Enthusiast
-                      I bring ideas to life through sleek, functional mobile experiences. With hands-on internship experience, a trio of impactful college projects, and a deep passion for Flutter development, I'm ready to build, learn, and grow in the world of app innovation.
-                    </p>
+                    <div className="flex flex-row items-center max-w-4xl mx-auto gap-6">
+                      <p className="text-h5 font-body text-neutral2 dark:text-gray-300 leading-body whitespace-pre-line md:flex-1 text-left whitespace-pre-wrap">
+                        Detail-oriented and innovative Full Stack Developer and Android Developer(mid) with a good educational foundation in computer science and business systems. good in Python, Java, HTML, CSS, and Flutter, with a passion for harnessing technology to drive business growth. Experienced in optimizing algorithms and developing AI-driven models through academic projects. Eager to contribute technical expertise and creativity to enhance software development initiatives in a collaborative environment.
+                      </p>
+                      <img
+                        src="/images/A.JPG"
+                        alt="Nithin Sai Koushik Kancharla"
+                        className="w-40 h-40 rounded-full object-cover md:shrink-0"
+                      />
+                    </div>
                   </section>
 
                   {/* Projects Section */} 

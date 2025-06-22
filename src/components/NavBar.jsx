@@ -23,12 +23,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap">
+    <nav className="flex items-center justify-between flex-wrap fixed w-full bg-background/80 dark:bg-background/80 backdrop-blur-md z-50 shadow-md border-b border-border/80 dark:border-border/80">
       {/* Mobile menu button */}
       <div className="block lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 border rounded text-neutral2 border-neutral2 hover:text-primary hover:border-primary dark:text-neutral1 dark:border-neutral1 dark:hover:text-secondary dark:hover:border-secondary"
+          className="flex items-center px-3 py-2 border rounded text-primary border-primary hover:text-accent hover:border-accent dark:text-primary dark:border-primary dark:hover:text-accent dark:hover:border-accent transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-75 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-opacity-100 hover:scale-110"
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
           aria-controls="mobile-menu"

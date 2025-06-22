@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ed6094',  // Pink, love and sweetness
-        'primary-dark': '#282828', // Dark gray for dark mode cards
-        secondary: '#b3b4b0', // Soft gray, luxury
-        accent: '#f5f3ee',    // Light cream, background
-        neutral1: '#f6e1d6',   // Light pink-beige, for backgrounds and subtle elements
-        neutral2: '#282828',   // Dark gray, for text and less prominent UI
+        background: '#1E1E2F', // soft charcoal
+        primary: '#F5F5F7',    // misty white
+        accent: '#4FC3F7',     // sky blue
+        card: '#2A2A3B',       // deep slate
+        section: '#252537',    // midnight indigo
+        border: '#3E3E50',     // subtle separation
       },
       fontFamily: {
         heading: ['"Poppins"', 'sans-serif'], // Modern, geometric sans-serif
@@ -27,6 +27,11 @@ module.exports = {
         'h5': '1.25rem',      // 20px
         'body': '1rem',       // 16px
         'small': '0.875rem',  // 14px
+      },
+      fontWeight: {
+        normal: 500,
+        bold: 700,
+        extraBold: 900,
       },
       lineHeight: {
         'heading': '1.2',     // Tighter leading for headings
