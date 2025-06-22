@@ -3,24 +3,8 @@ import React, { useState } from 'react';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    // { name: 'Resume', href: '/resume.pdf' }, // Example for a resume link
-    // { name: 'Contact', href: '#contact' }, // Placeholder for future section
-  ];
+  // Removed navLinks and scrollToSection as they are unused now
 
-  const scrollToSection = (e, id) => {
-    e.preventDefault();
-    // Remove the '#' from the id to get the raw element ID
-    const sectionId = id.substring(1);
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false); // Close mobile menu after clicking a link
-    }
-  };
 
   return (
 <nav className="flex items-center justify-between flex-wrap fixed w-full bg-background/90 dark:bg-background/90 backdrop-blur-md z-70 shadow-lg border-b border-border/80 dark:border-border/80">
@@ -44,20 +28,10 @@ const NavBar = () => {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } w-full absolute top-full left-0 bg-neutral1 dark:bg-primary lg:static lg:flex lg:items-center lg:w-auto lg:bg-transparent dark:lg:bg-transparent`} id="mobile-menu"
+        } w-full max-w-4xl mx-auto lg:static lg:flex lg:items-center lg:w-auto lg:bg-transparent dark:lg:bg-transparent border-0 rounded-md p-0 box-border overflow-hidden`} id="mobile-menu"
       >
-        <div className="text-sm lg:flex-grow lg:text-right">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="block mt-4 lg:inline-block lg:mt-0 text-neutral2 hover:text-primary mr-4
-                         dark:text-neutral1 dark:hover:text-secondary transition-colors duration-200 text-body font-body p-2 lg:p-0"
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="text-sm lg:flex-grow lg:text-right flex gap-6 justify-start">
+          {/* Navigation buttons removed, so no links rendered */}
         </div>
       </div>
     </nav>

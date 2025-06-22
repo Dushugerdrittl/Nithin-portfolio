@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ThemeToggle from './components/ThemeToggle';
 import ProjectCard from './components/ProjectCard';
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
@@ -23,10 +22,9 @@ function App() {
           <h1 className="text-h3 font-heading text-primary dark:text-primary">Welcome to Master Nithin Sai Kosuhik Portfolio</h1>
           <div className="flex items-center gap-6">
             <NavBar />
-            <ThemeToggle />
           </div>
         </header>
-        <main className="container mx-auto p-4 md:p-8 space-y-16">
+        <main className="max-w-screen-lg mx-auto p-4 md:p-8 space-y-16">
           <Routes>
             <Route
               path="/"
