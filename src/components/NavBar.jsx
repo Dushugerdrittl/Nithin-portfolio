@@ -7,7 +7,7 @@ const NavBar = () => {
 
 
   return (
-<nav className="flex items-center justify-between flex-wrap fixed w-full bg-background/90 dark:bg-background/90 backdrop-blur-md z-70 shadow-lg border-b border-border/80 dark:border-border/80">
+<nav className="flex items-center justify-between flex-wrap bg-background/90 dark:bg-background/90 backdrop-blur-md z-70 shadow-lg border-b border-border/80 dark:border-border/80">
       {/* Mobile menu button */}
       <div className="block lg:hidden">
         <button
